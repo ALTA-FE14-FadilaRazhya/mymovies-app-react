@@ -12,11 +12,11 @@ class Card extends Component<CardProps> {
     const {id, title, image, description} = this.props;
     return (
     <div>
-        <div className="m-3 card w-46 bg-base-100 shadow-xl" id={id}>
+        <div className="m-3 card w-72 bg-base-100 shadow-xl" id={id}>
           <figure>
             <img 
             src={image} alt="Movie"
-            width={200}
+            width={290}
             height={200}
             />
           </figure>
