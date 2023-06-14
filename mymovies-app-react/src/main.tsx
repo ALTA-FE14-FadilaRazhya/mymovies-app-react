@@ -9,6 +9,8 @@ import DetailMovie from './DetailMovie.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <NowPlaying />
+    <App />
   </React.StrictMode>,
 )
+
+

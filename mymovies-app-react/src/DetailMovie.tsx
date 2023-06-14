@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Navbar from './components/Navbar'
 import DetailCard from './components/DetailCard'
+import { withRouter } from './withRouter';
 
 export default class DetailMovie extends Component {
   render() {

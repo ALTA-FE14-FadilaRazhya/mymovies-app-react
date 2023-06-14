@@ -20,6 +20,7 @@ class NowPlaying extends Component<NowPlayingMoviesState> {
     movies: [],
   };
 
+
   componentDidMount() {
     this.fetchNowPlayingMovies();
   }

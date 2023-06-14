@@ -2,29 +2,20 @@ import React, { Component } from 'react'
 import Card from './components/Card';
 import Navbar from './components/Navbar';
 import { list } from "../src/dummy/list.json"
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-class App extends Component {
-  render() {    
-    return (
-      <div>
-       <Navbar />
-        <div className="m-10 gap-y-5 gap-x-5 flex flex-row">
-         {list ?
-          list.map((item, index) => {
-            return (
-              <Card 
-                key={index}
-                id="list"
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            );
-          }) : undefined}
-        </div>
-      </div>
-      
-    );
-  }
-}
+import NowPlaying from './NowPlaying.tsx'
+import ListFavourite from './ListFavourite.tsx'
+import DetailMovie from './DetailMovie.tsx'
+
+const App = () => {
+  return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NowPlaying />} />
+          <Route path="/DetailMovie" element={<DetailMovie />} />
+        </Routes>
+      </BrowserRouter>
+  );
+};
 export default App;
